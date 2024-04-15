@@ -7,17 +7,17 @@ using System.IO;
 using System.Collections.Generic;
 namespace Aplikacja
 {
-    public partial class MLModel1
+    public partial class CenyPaliw
     {
         /// <summary>
-        /// model input class for MLModel1.
+        /// model input class for CenyPaliw.
         /// </summary>
         #region model input class
         public class ModelInput
         {
             [LoadColumn(0)]
-            [ColumnName(@"Data zmiany")]
-            public DateTime Data_zmiany { get; set; }
+            [ColumnName(@"Data")]
+            public DateTime Data { get; set; }
 
             [LoadColumn(1)]
             [ColumnName(@"Cena")]
@@ -32,13 +32,13 @@ namespace Aplikacja
         #endregion
 
         /// <summary>
-        /// model output class for MLModel1.
+        /// model output class for CenyPaliw.
         /// </summary>
         #region model output class
         public class ModelOutput
         {
-            [ColumnName(@"Data zmiany")]
-            public float Data_zmiany { get; set; }
+            [ColumnName(@"Data")]
+            public float Data { get; set; }
 
             [ColumnName(@"Cena")]
             public float Cena { get; set; }
@@ -56,7 +56,7 @@ namespace Aplikacja
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("MLModel1.mlnet");
+        private static string MLNetModelPath = Path.GetFullPath("CenyPaliw.mlnet");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 

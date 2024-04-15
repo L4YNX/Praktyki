@@ -13,9 +13,9 @@ using Microsoft.ML;
 
 namespace Aplikacja
 {
-    public partial class MLModel1
+    public partial class CenyPaliw
     {
-        public const string RetrainFilePath =  @"C:\Users\olafr\Desktop\praktyki\ON.csv";
+        public const string RetrainFilePath =  @"C:\praktyki\ON.csv";
         public const char RetrainSeparatorChar = ';';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  false;
@@ -92,9 +92,9 @@ namespace Aplikacja
         {
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"typ paliwa", @"typ paliwa", outputKind: OneHotEncodingEstimator.OutputKind.Indicator)      
-                                    .Append(mlContext.Transforms.Conversion.ConvertType(@"Data zmiany", @"Data zmiany"))      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"typ paliwa",@"Data zmiany"}))      
-                                    .Append(mlContext.Regression.Trainers.LightGbm(new LightGbmRegressionTrainer.Options(){NumberOfLeaves=4,NumberOfIterations=2590,MinimumExampleCountPerLeaf=30,LearningRate=0.999999776672986,LabelColumnName=@"Cena",FeatureColumnName=@"Features",Booster=new GradientBooster.Options(){SubsampleFraction=0.299564360712808,FeatureFraction=0.970793851268155,L1Regularization=9.39896893328372E-10,L2Regularization=0.112651687547802},MaximumBinCountPerFeature=309}));
+                                    .Append(mlContext.Transforms.Conversion.ConvertType(@"Data", @"Data"))      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"typ paliwa",@"Data"}))      
+                                    .Append(mlContext.Regression.Trainers.LightGbm(new LightGbmRegressionTrainer.Options(){NumberOfLeaves=222,NumberOfIterations=871,MinimumExampleCountPerLeaf=20,LearningRate=0.999999776672986,LabelColumnName=@"Cena",FeatureColumnName=@"Features",Booster=new GradientBooster.Options(){SubsampleFraction=0.999999776672986,FeatureFraction=0.99999999,L1Regularization=2E-10,L2Regularization=0.992860901642057},MaximumBinCountPerFeature=197}));
 
             return pipeline;
         }

@@ -1,0 +1,314 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\olafr\\Desktop\\praktyki\\ON.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Data zmiany",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "DateTime",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "Cena",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "typ paliwa",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.99570889382383676,
+        "RuntimeInSeconds": 3.838,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "typ paliwa"
+            ],
+            "InputColumnNames": [
+              "typ paliwa"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Data zmiany"
+            ],
+            "InputColumnNames": [
+              "Data zmiany"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "typ paliwa",
+              "Data zmiany"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 30,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 2590,
+            "SubsampleFraction": 0.29956436071280834,
+            "MaximumBinCountPerFeature": 309,
+            "FeatureFraction": 0.97079385126815543,
+            "L1Regularization": 9.3989689332837175E-10,
+            "L2Regularization": 0.1126516875478025,
+            "LabelColumnName": "Cena",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.9955176245055819,
+        "RuntimeInSeconds": 3.809,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "typ paliwa"
+            ],
+            "InputColumnNames": [
+              "typ paliwa"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Data zmiany"
+            ],
+            "InputColumnNames": [
+              "Data zmiany"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "typ paliwa",
+              "Data zmiany"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 31,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 2564,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 312,
+            "FeatureFraction": 0.88317189325448986,
+            "L1Regularization": 5.89540900864155E-09,
+            "L2Regularization": 0.18000653664182967,
+            "LabelColumnName": "Cena",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.99499954984026784,
+        "RuntimeInSeconds": 37.53,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "typ paliwa"
+            ],
+            "InputColumnNames": [
+              "typ paliwa"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Data zmiany"
+            ],
+            "InputColumnNames": [
+              "Data zmiany"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "typ paliwa",
+              "Data zmiany"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 444,
+            "MinimumExampleCountPerLeaf": 28,
+            "LearningRate": 0.18356271200117208,
+            "NumberOfTrees": 2615,
+            "SubsampleFraction": 0.0064225008722800167,
+            "MaximumBinCountPerFeature": 305,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.070499677090163762,
+            "LabelColumnName": "Cena",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.99487623307659412,
+        "RuntimeInSeconds": 4.658,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "typ paliwa"
+            ],
+            "InputColumnNames": [
+              "typ paliwa"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Data zmiany"
+            ],
+            "InputColumnNames": [
+              "Data zmiany"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "typ paliwa",
+              "Data zmiany"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 21,
+            "LearningRate": 0.2349696928502778,
+            "NumberOfTrees": 3115,
+            "SubsampleFraction": 0.21169622933370691,
+            "MaximumBinCountPerFeature": 257,
+            "FeatureFraction": 0.87308633380513756,
+            "L1Regularization": 6.195267652381487E-10,
+            "L2Regularization": 0.11180420546734057,
+            "LabelColumnName": "Cena",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.99465613533959707,
+        "RuntimeInSeconds": 2.471,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "typ paliwa"
+            ],
+            "InputColumnNames": [
+              "typ paliwa"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Data zmiany"
+            ],
+            "InputColumnNames": [
+              "Data zmiany"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "typ paliwa",
+              "Data zmiany"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 21,
+            "LearningRate": 0.59351240296310048,
+            "NumberOfTrees": 1641,
+            "SubsampleFraction": 0.60491042422851482,
+            "MaximumBinCountPerFeature": 232,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 7.4628200779175863E-10,
+            "L2Regularization": 0.375247844341812,
+            "LabelColumnName": "Cena",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ConvertType",
+      "e2": "Concatenate",
+      "e3": "FastTreeRegression",
+      "e4": "FastForestRegression",
+      "e5": "LightGbmRegression",
+      "e6": "LbfgsPoissonRegressionRegression",
+      "e7": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\olafr\\Desktop\\praktyki\\aplikacja\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 100,
+    "LabelColumn": "Cena",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
